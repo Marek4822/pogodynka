@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="left_site">
+        <div class="app_name">
+          <h2>Weather app</h2>
+        </div>
+        <h2 class="location"></h2>
+        <h2 id="quote"></h2>
+        <div class="inputs">
+          <input type="text" id="city" placeholder="Enter location" />
+          <img src="/img/search.jpg" id="button" alt="button" />
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="current">
+          <p id="invalid_city">Invalid city name!</p>
+          <div id="date">
+            <h1 id="date_name"></h1>
+            <h4>Current:</h4>
+          </div>
+
+          <div id="data">
+            <div class="left_data">
+              <img id="current_img" src="" />
+              <p id="temp"></p>
+            </div>
+            <div class="right_data">
+              <p id="condition"></p>
+              <p id="humidity"></p>
+              <p id="wind"></p>
+              <p id="max_temp"></p>
+              <p id="min_temp"></p>
+            </div>
+          </div>
+        </div>
+        <h4 id="forcast_name">Forecast:</h4>
+        <div class="forecast_all">
+          <img src="/img/left-arrow.png" id="btn_back" />
+          <div id="forecast"></div>
+          <img src="/img/right-arrow.png" id="btn_next" />
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

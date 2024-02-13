@@ -1,0 +1,323 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  padding: auto;
+  overflow-x: hidden;
+
+  font-family: "Lato", sans-serif;
+  background-image: linear-gradient(
+    to right top,
+    #00b9f9,
+    #3bb6f7,
+    #55b2f5,
+    #67aff1,
+    #76aced,
+    #76aced,
+    #76aced,
+    #76aced,
+    #67aff1,
+    #55b2f5,
+    #3bb6f7,
+    #00b9f9
+  );
+}
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.left_site {
+  padding: 20px;
+  color: #fff;
+  width: 30vw;
+  height: 72vh;
+  background-color: rgb(48, 56, 85);
+  /* box-shadow: 0px 0px 24px -1px rgba(66, 68, 90, 1); */
+  border: 2px solid rgb(48, 56, 85);
+  border-radius: 30px;
+}
+
+#quote {
+  margin-top: 20vh;
+  text-align: center;
+}
+
+.inputs img {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.inputs img:hover {
+  opacity: 0.8;
+}
+
+input[type="text"] {
+  color: #fff;
+  width: 50%;
+  border: 0;
+  border-bottom: 2px solid;
+  outline: 0;
+  padding: 7px 0;
+  background: transparent;
+}
+
+input:focus {
+  font-weight: bold;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #00b9f9, #76aced);
+  border-image-slice: 1;
+}
+
+.location {
+  float: right;
+  font-size: 18px;
+}
+
+.app_name {
+  float: left;
+  border-bottom: 2px solid #76aced;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+.content {
+  width: 30vw;
+  height: 72vh;
+  padding: 20px;
+  background-color: rgb(252, 252, 252);
+  border: 2px solid rgb(252, 252, 252);
+  color: rgb(48, 56, 85);
+  display: none;
+}
+
+.content::after {
+  background-color: #fff;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -0.01px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  border-radius: 30px;
+}
+
+#invalid_city {
+  display: none;
+}
+
+#date {
+  display: none;
+  margin: 20px;
+}
+
+#data {
+  margin: 20px;
+  box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 1);
+  border-radius: 30px;
+  display: none;
+  justify-content: space-between;
+  height: 350px;
+}
+
+.left_data {
+  padding: 20px;
+  border-right: 2px solid #abadb1;
+}
+#current_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right_data {
+  padding: 10px;
+  font-size: 20px;
+  margin: auto;
+}
+
+#temp {
+  text-align: center;
+  font-weight: bold;
+  font-size: 64px;
+}
+
+#forcast_name {
+  display: none;
+  margin: 20px 0 0 20px;
+}
+
+.forecast_all {
+  align-items: center;
+  justify-content: center;
+  display: none;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  font-weight: bold;
+}
+
+#btn_back,
+#btn_next {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transform: translate(0, -50%);
+}
+
+#btn_back:hover,
+#btn_next:hover {
+  opacity: 0.8;
+}
+
+#forecast {
+  overflow: auto;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+#forecast ul {
+  list-style-type: none;
+  display: inline-block;
+  box-shadow: 0px 0px 4px -2px rgba(0, 0, 0, 1);
+  margin: 10px;
+  border-radius: 30px;
+  text-align: center;
+  padding: 14px;
+}
+
+#invalid_city {
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  width: 30vw;
+}
+
+@media (max-height: 900px) {
+  .left_site {
+    height: 90vh;
+  }
+  #data {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .left_site {
+    width: 25vw;
+  }
+  .left_site h2 {
+    font-size: 18px;
+  }
+
+  #data {
+    margin: 10px;
+  }
+  #temp {
+    font-size: 42px;
+  }
+  #current_img {
+    width: 100px;
+    height: 100px;
+  }
+  .right_data p {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .location {
+    float: left;
+  }
+  #date_name {
+    font-size: 24px;
+  }
+  .left_site {
+    width: 20vw;
+  }
+  .content {
+    width: 40vw;
+  }
+  .inputs {
+    margin-left: 0px;
+  }
+
+  #quote {
+    margin-top: 20vh;
+    text-align: justify;
+  }
+
+  .inputs img {
+    height: 24px;
+    width: 24px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 4px 0;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  body main {
+    width: 100vw;
+    height: auto;
+    background: #fff;
+    display: block;
+    overflow-x: hidden;
+  }
+
+  .left_site {
+    padding: 20px;
+    width: auto;
+    height: 20vh;
+    border-radius: 0 0 25px 25px;
+    border: 0px;
+  }
+
+  #quote {
+    display: none;
+  }
+
+  .inputs img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .location {
+    float: right;
+  }
+
+  .inputs {
+    padding-top: 10%;
+    width: 100%;
+    display: flex;
+  }
+
+  .content {
+    width: auto;
+    padding: 20px;
+  }
+
+  .right_data {
+    padding: 10px;
+    font-size: 20px;
+    margin: auto;
+  }
+
+  #forcast_name {
+    display: none;
+    margin: 20px 0 0 20px;
+  }
+
+  #invalid_city {
+    width: 100%;
+  }
+}
